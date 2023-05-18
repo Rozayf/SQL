@@ -47,5 +47,5 @@ WHERE RIGHT (title,6) = 'APOLLO';
 SELECT title, length FROM film
 ORDER BY length DESC;
 
-
-SELECT COUNT(DISTINCT special_features = 'Behind the Scenes') FROM film;
+SELECT COUNT(title) FROM film
+WHERE special_features LIKE '%Behind the Scenes%';
