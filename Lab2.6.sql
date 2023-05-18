@@ -17,7 +17,7 @@ SELECT COUNT(rental_id)
 FROM rental
 WHERE staff_id = 2;
 
-SELECT COUNT(rental_id) AS Count_id , staff_id FROM rental
+SELECT  staff_id, COUNT(rental_id) AS Count_id  FROM rental
 GROUP BY staff_id;
 
 SELECT COUNT(title) as title_count, release_year FROM film
