@@ -58,7 +58,7 @@ SELECT * from payment;
 
 SET sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
 
-SELECT c.customer_id, c.first_name, c.last_name, sum(p.amount) 
+SELECT c.first_name, c.last_name, sum(p.amount) 
 FROM customer c
 JOIN payment p 
 using (customer_id)

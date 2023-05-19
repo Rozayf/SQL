@@ -38,8 +38,9 @@ FROM rental;
 
 SELECT release_year FROM film;
 
-SELECT title FROM film
-WHERE title LIKE 'ARMAGEDDON %';
+SELECT title FROM film WHERE title LIKE "%ARMAGEDDON %" ;
+
+SELECT title FROM film WHERE LEFT (title,10) = 'ARMAGEDDON' or RIGHT (title,10) = 'ARMAGEDDON';
 
 SELECT title FROM film
 WHERE RIGHT (title,6) = 'APOLLO';

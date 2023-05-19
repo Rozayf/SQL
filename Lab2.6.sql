@@ -4,6 +4,8 @@ SELECT DISTINCT last_name
 FROM actor
 ORDER by last_name ASC;
 
+SELECT COUNT(DISTINCT last_name) FROM actor;
+
 SELECT last_name
 FROM actor
 GROUP BY last_name
@@ -35,3 +37,10 @@ GROUP BY rating;
 
 SELECT title, length from film
 ORDER BY length ASC;
+
+SELECT title, length from film
+ORDER BY length ASC
+LIMIT 10;
+
+SELECT title, length from film
+ORDER BY length DESC;
