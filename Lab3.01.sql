@@ -32,7 +32,7 @@ where first_name = 'CHARLOTTE' and last_name = 'HUNTER'; ##customerID 130
 select film_id from film
 where title = 'Academy Dinosaur'; ##film ID 1
 
-select inventory_id, film_id from inventory
+select inventory_id, film_id, store_id from inventory
 where film_id = 1; ##inventory_id 9
 
 INSERT INTO rental(inventory_id, customer_id, staff_id) 
@@ -43,6 +43,15 @@ SELECT * FROM RENTAL;
 
 
 ##IMPROVEMENTS TO SAKILA
+
+
+##1. Delete some tables that have no connection to other tables 
+##2. We could also delete some of the columns that have duplicated information and join them instead. 
+### For example the city, country, district information could all be joined in onto the address table. 
+### The same goes for the many tables that were created to store information about the films and the actors. 
+##3. Some data formats could be re-formatted in order to make the extraction of information easier. 
+##4. There could be a optimised procedure for checking if movies are on stock, if one has not been implemented within the stores themselves. 
+
 
 
 
